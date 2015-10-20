@@ -60,6 +60,7 @@
     end
 
 ## complete resource
+[website.rb](https://github.com/kennonkwok/sddevops-custom-resources/blob/master/resources/website.rb)
 
 ## create templates directory
     mkdir templates
@@ -78,14 +79,12 @@
       TypesConfig /etc/mime.types
     </IfModule>
 
-## now we have a complete resource
-[website.rb](https://github.com/kennonkwok/sddevops-custom-resources/blob/master/resources/website.rb)
-
 ## use resource in recipe - default.rb
-   mysite 'foo' do
-     port 81
-     action :create
-   end
+    #recipes/default.rb
+    mysite 'foo' do
+      port 81
+      action :create
+    end
 
 ## quick look at .kitchen.yml, remove ubuntu
       - name: ubuntu-14.04  <--- take this out
@@ -116,6 +115,7 @@
     kitchen verify
 
 ## add site on port 82 to make test pass - recipes/default.rb
+    ...
     mysite 'bar' do
       port 82
       action :create

@@ -66,18 +66,12 @@
     mkdir templates
 
 ## templates/httpd.conf.erb
-    ServerRoot "/etc/httpd"
     Listen <%= @port %>
-    User apache
-    Group apache
-    <Directory />
-      AllowOverride none
-      Require all denied
-    </Directory>
-    DocumentRoot "/var/www/vhosts/<%= @instance_name %>"
-    <IfModule mime_module>
-      TypesConfig /etc/mime.types
-    </IfModule>
+
+    <VirtualHost *:<%= @port %>>
+        DocumentRoot "/var/www/vhosts/<%= @instance_name %>"
+        ServerName <%= node['fqdn'] %>
+    </VirtualHost>
 
 ## use resource in recipe - default.rb
     #recipes/default.rb

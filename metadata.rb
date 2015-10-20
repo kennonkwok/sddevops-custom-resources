@@ -1,0 +1,7 @@
+name 'sddevops-custom-resources'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures sddevops-custom-resources'
+long_description 'Installs/Configures sddevops-custom-resources'
+version '0.1.0'

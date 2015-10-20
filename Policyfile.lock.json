@@ -1,0 +1,48 @@
+{
+  "revision_id": "05688059c8257211efe8a2c264e9b1035ed6b430bda74ce301790c956b3661ab",
+  "name": "sddevops-custom-resources",
+  "run_list": [
+    "recipe[sddevops-custom-resources::default]"
+  ],
+  "cookbook_locks": {
+    "sddevops-custom-resources": {
+      "version": "0.1.0",
+      "identifier": "7e478a8bad7f873d1721b6a13e05062d797b12ca",
+      "dotted_decimal_identifier": "35544507440004999.17195407144730117.6792381403850",
+      "source": ".",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": null,
+        "working_tree_clean": true,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "."
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "sddevops-custom-resources",
+        ">= 0.0.0"
+      ]
+    ],
+    "dependencies": {
+      "sddevops-custom-resources (0.1.0)": [
+
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+ServerRoot "/etc/httpd"
+Listen <%= @port %>
+User apache
+Group apache
+<Directory />
+  AllowOverride none
+  Require all denied
+</Directory>
+DocumentRoot "/var/www/vhosts/<%= @instance_name %>"
+<IfModule mime_module>
+  TypesConfig /etc/mime.types
+</IfModule>

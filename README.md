@@ -118,13 +118,16 @@
     ...
     mysite 'bar' do
       port 82
-      action :create
     end
+
+## converge and test
+    kitchen converge
+    kitchen verify
 
 ## will this work in centos 6.7? - .kitchen.yml
       - name: centos-6.7 <--- add this
       - name: centos-7.1
 
 ## test everything!
-    kitchen test
+    kitchen test -c
 

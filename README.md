@@ -43,10 +43,10 @@
       end
 
       directory "/var/www/vhosts/#{instance_name}" do
-        mode '0755'
         recursive true
         owner 'root'
         group 'root'
+        mode '0755'
         action :create
         notifies :restart, 'service[httpd]'
       end
@@ -54,6 +54,12 @@
 
 ## finish website.rb
     ...
+      file "/var/www/vhosts/#{instance_name}/index.html" do
+        mode '0644'
+        content "Ohai! This is the #{instance_name} site running on port #{port}."
+        action :create
+      end
+
       service 'httpd' do
         action [:enable, :start]
       end

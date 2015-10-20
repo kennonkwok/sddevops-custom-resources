@@ -30,6 +30,12 @@ action :create do
     notifies :restart, 'service[httpd]'
   end
 
+  file "/var/www/vhosts/#{instance_name}/index.html" do
+    mode '0644'
+    content "Ohai! This is the #{instance_name} site running on port #{port}."
+    action :create
+  end
+  
   service 'httpd' do
     action [:start, :enable]
   end

@@ -79,7 +79,7 @@
     </IfModule>
 
 ## now we have a complete resource
-[website.rb](http://github.com/kennonkwok/sddevops-custom-resources/resources/website.rb)
+[website.rb](https://github.com/kennonkwok/sddevops-custom-resources/blob/master/resources/website.rb)
 
 ## use resource in recipe - default.rb
    mysite 'foo' do
